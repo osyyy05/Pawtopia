@@ -1,0 +1,49 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Django
+db.sqlite3
+db.sqlite3-*
+*.sqlite3
+media/
+staticfiles/
+
+# React
+node_modules/
+dist/
+build/
+coverage/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Private uploaded documents
+backend/donation_receipts/
+
+# Local media backups
+backend/media_backup_before_images/
+
+# Database exports and backups
+backend/pawtopia_backup_before_images.json
+
+# Backup source files
+*_backup.tsx
+
+# Local Django settings containing credentials
+backend/core/settings.py

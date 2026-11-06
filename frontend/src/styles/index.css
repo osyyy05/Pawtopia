@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* =========================================
+   GLOBAL SCROLLBAR STABILITY
+   Prevent Radix Select / Dialog from
+   shifting the page when opened
+   ========================================= */
+
+html {
+  scrollbar-gutter: stable;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   NUMBER INPUT
+   ========================================= */
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+/* =========================================
+   BROWSER AUTOFILL
+   Prevent Chrome / Edge from changing
+   the input background colour
+   ========================================= */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: white !important;
+  color: white !important;
+  caret-color: white !important;
+
+  /* Make browser autofill background transparent */
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+
+  /* Stop the browser's autofill colour transition */
+  transition: background-color 99999s ease-in-out 0s !important;
+}
+
+
+/* =========================================
+   SONNER TOAST
+   ========================================= */
+
+[data-sonner-toaster] {
+  z-index: 99999;
+}
+@media print {
+  body {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide everything first */
+  body * {
+    visibility: hidden !important;
+  }
+
+  /* Show ONLY the Training Guide */
+  .print-guide,
+  .print-guide * {
+    visibility: visible !important;
+  }
+
+  /* Put the guide at the top of the printed page */
+  .print-guide {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+
+    background: white !important;
+    color: black !important;
+
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Hide the Print button itself */
+  .print-guide button {
+    display: none !important;
+  }
+
+  /* Make guide text readable */
+  .print-guide * {
+    color: black !important;
+    background: white !important;
+    border-color: #ddd !important;
+  }
+}
