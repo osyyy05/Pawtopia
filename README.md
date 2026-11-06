@@ -1,11 +1,20 @@
+# Pawtopia: Smart Animal Encyclopedia and Adoption Community System
 
-  # Generate Full Code
+Pawtopia is a web-based platform designed to support animal education, pet adoption, veterinary services, and community engagement.
 
-  This is a code bundle for Generate Full Code. The original project is available at https://www.figma.com/design/odQVWgc5GANYj7gi689UKC/Generate-Full-Code.
+## Technologies Used
 
-  ## Running the code
+- Frontend: React, TypeScript, Vite, Tailwind CSS
+- Backend: Django REST Framework, Python
+- Database: SQLite
 
-  Run `npm i` to install the dependencies.
+## Main Features
 
-  Run `npm run dev` to start the development server.
-  
+- Animal Encyclopedia
+- Pet Adoption Management
+- Pet Training and Achievement Badges
+- Community Interaction
+- Veterinary Appointment Booking
+- AI-Powered Veterinary Service Matching
+- Donation Management
+- Role-Based Access Control
